@@ -1,18 +1,12 @@
 ---
-# NOTE TO ALEXA: the spec asks for this case study to be framed around "the
-# pivot and the market read that led to closing it, as business judgment, not
-# failure." I don't have the actual pivot story anywhere in the codebase -
-# the existing data describes Everloving Paws as an active, ongoing agency.
-# I wrote this case study from only the facts I actually have (founding,
-# scope, craft). Send me the real pivot narrative and I'll rewrite this to
-# match the spec's framing.
-title: "Everloving Paws"
-tagline: "A boutique agency built exclusively for the pet industry."
+title: "Everloving Paws Digital Agency"
+tagline: "Brand identity, UX/UI design, Webflow development, and digital strategy for a boutique digital agency built exclusively for the pet industry."
 order: 5
 featured: false
-thumbnail: "/photos/everlovingpaws.png"
-thumbnailVideo: "/videos/everloving.mp4"
-externalUrl: "https://everlovingpaws.com"
+thumbnailVideo: "/work/everloving-paws-video.mp4"
+externalUrl: "https://everlovingpaws.webflow.io/"
+externalLabel: "Visit Everloving Paws site"
+externalButton: true
 problem: >
   Pet businesses, rescues, startups, and veterinary clinics were underserved
   by general-purpose agencies that didn't understand the category - the
@@ -22,14 +16,33 @@ role: >
   I founded and direct Everloving Paws, a boutique agency specializing
   exclusively in the pet industry, offering web design, CMS development,
   social media management, and digital marketing.
-decisions:
-  - "Chose to specialize exclusively in one industry (pet businesses, rescues, and clinics) rather than take a horizontal, general-agency approach."
-  - "Built on Webflow with a Client First class system and custom interactions, favoring a maintainable, designer-controlled stack over a page-builder shortcut."
+built:
+  - "Brand identity"
+  - "UX/UI design"
+  - "Webflow development with the Client First framework"
+  - "Digital strategy"
 result: ""
-gallery:
-  - src: "/photos/everlovingpaws.png"
-    alt: "Everloving Paws logo"
-  - src: "/videos/everloving.mp4"
-    alt: "Everloving Paws site walkthrough"
+showcase:
+  - title: "Figma Design"
+    src: "/work/everloving-paws-figma-video.mp4"
+    alt: "Everloving Paws website design in Figma"
     video: true
+  - title: "Canva Brand Kit & Social Media Templates"
+    src: "/work/everloving-paws-canva-video.mp4"
+    alt: "Everloving Paws brand kit and social media post templates in Canva"
+    video: true
+galleryTitle: "Sample Social Media Templates"
+gallery:
+  - src: "/work/everloving-paws-adoption-post-1.png"
+    alt: "Adoption advertising guide Instagram post, cover - Rescued a cat or a dog? Your simplified adoption advertising guide"
+  - src: "/work/everloving-paws-adoption-post-2.png"
+    alt: "Adoption advertising guide Instagram post, step 1 - Photos"
+  - src: "/work/everloving-paws-adoption-post-3.png"
+    alt: "Adoption advertising guide Instagram post, step 2 - Videos"
+  - src: "/work/everloving-paws-adoption-post-4.png"
+    alt: "Adoption advertising guide Instagram post, step 3 - Story"
+  - src: "/work/everloving-paws-adoption-post-5.png"
+    alt: "Adoption advertising guide Instagram post, step 4 - Post"
+  - src: "/work/everloving-paws-adoption-post-6.png"
+    alt: "Adoption advertising guide Instagram post, step 5 - Link"
 ---

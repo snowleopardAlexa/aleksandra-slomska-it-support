@@ -4,22 +4,26 @@ import { SITE } from "@/data/site";
 // Work dropdown items, in display order.
 const WORK_MENU = [
   {
-    title: "Wildari Planet",
+    title: "Full-Stack Developer",
+    company: "Wildari Planet",
     description: "Full-stack conservation platform built with Drupal 10, Astro.js, and Claude Code.",
     href: "/work/wildari-planet",
   },
   {
-    title: "Cat Connections NYC",
+    title: "Technical Lead, Website & CMS",
+    company: "Cat Connections NYC",
     description: "Full CMS website, Shelterluv forms, Google Workspace, social media, and branding.",
     href: "/work/cat-connections-nyc-technical-lead",
   },
   {
-    title: "Cat Connections NYC",
+    title: "Fundraising & eCRM Specialist",
+    company: "Cat Connections NYC",
     description: "Raisely eCRM, Donation Forms, GoFundMe, and Zeffy campaigns that raised $18,000+.",
     href: "/work/cat-connections-nyc-digital-fundraising",
   },
   {
-    title: "Sisters of St. Joseph",
+    title: "Web Strategy & Development Lead",
+    company: "Sisters of St. Joseph",
     description: "Three-site WordPress rebuild with Blackbaud Raiser's Edge CRM integration.",
     href: "/work/sisters-of-st-joseph",
   },
@@ -43,7 +47,7 @@ const ARROW_ANGLES = [-45, 45, 135, -135];
             <path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </summary>
-        <div class="mega-panel invisible absolute left-1/2 top-full z-50 mt-2 w-[min(90vw,640px)] -translate-x-1/2 rounded-xl border border-border bg-background opacity-0 shadow-xl transition-all duration-150 group-open:visible group-open:opacity-100 md:group-hover:visible md:group-hover:opacity-100">
+        <div class="mega-panel invisible absolute left-1/2 top-full z-50 mt-2 w-[min(90vw,720px)] -translate-x-1/2 rounded-xl border border-border bg-background opacity-0 shadow-xl transition-all duration-150 group-open:visible group-open:opacity-100 md:group-hover:visible md:group-hover:opacity-100">
           <div class="grid grid-cols-2 gap-1 p-3">
             {WORK_MENU.map((item, i) => (
               <a
@@ -63,7 +67,7 @@ const ARROW_ANGLES = [-45, 45, 135, -135];
                 </span>
                 <span class="min-w-0">
                   <span class="block truncate text-sm font-medium text-foreground">{item.title}</span>
-                  <span class="block truncate text-xs text-muted-foreground">{item.description}</span>
+                  <span class="block truncate text-xs text-muted-foreground">{item.company} · {item.description}</span>
                 </span>
               </a>
             ))}
@@ -120,6 +124,7 @@ const ARROW_ANGLES = [-45, 45, 135, -135];
             {WORK_MENU.map((item) => (
               <a href={item.href} class="rounded-md px-2 py-1.5 text-sm text-foreground hover:bg-muted">
                 {item.title}
+                <span class="block text-xs text-muted-foreground">{item.company}</span>
               </a>
             ))}
             <a href="/work" class="rounded-md px-2 py-1.5 text-sm font-medium text-foreground hover:bg-muted">

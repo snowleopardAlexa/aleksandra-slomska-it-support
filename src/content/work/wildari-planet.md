@@ -1,5 +1,6 @@
 ---
-title: "Wildari Planet - Full-Stack Conservation Platform"
+title: "Full-Stack Developer"
+company: "Wildari Planet"
 tagline: "A headless wildlife education platform built end-to-end with Drupal 10, Astro.js, and Claude Code."
 order: 1
 featured: true

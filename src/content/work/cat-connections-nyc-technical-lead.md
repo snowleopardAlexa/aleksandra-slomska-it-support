@@ -1,5 +1,6 @@
 ---
-title: "Cat Connections NYC - Technical Lead, Web Development, Donation Forms & Digital Operations"
+title: "Technical Lead, Website & CMS"
+company: "Cat Connections NYC"
 tagline: "Technical leadership for an animal rescue nonprofit - designing and building its full CMS website, first on WordPress and then on Webflow, with adoption, foster, volunteer, and intake forms connected to Shelterluv animal management software."
 order: 2.1
 featured: false

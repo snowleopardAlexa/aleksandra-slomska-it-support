@@ -8,6 +8,7 @@ const work = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/work" }),
   schema: z.object({
     title: z.string(),
+    company: z.string().optional(), // shown at the start of the tagline; page <title> becomes "Company - title"
     tagline: z.string(), // one-line problem/outcome, used on cards + mega menu
     order: z.number(), // controls grid order; lower = earlier
     featured: z.boolean().default(false), // show in homepage Featured Work + nav mega menu

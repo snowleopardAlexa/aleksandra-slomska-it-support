@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const {
-  title, tagline, problem, role, decisions, result, gallery, externalUrl, externalLabel = "Visit live site", externalButton, draft, thumbnail, thumbnailVideo,
+  title, company, tagline, problem, role, decisions, result, gallery, externalUrl, externalLabel = "Visit live site", externalButton, draft, thumbnail, thumbnailVideo,
   overview, built, results, tools, links, linksNote, showcase, galleryLink, galleryTitle = "Visual documentation", process,
 } = entry.data;
 
@@ -32,7 +32,7 @@ for (const item of showcase) {
 }
 ---
 
-<Layout title={title} description={tagline}>
+<Layout title={company ? `${company} - ${title}` : title} description={tagline}>
   <article class="mx-auto max-w-3xl px-6 py-16 sm:py-20">
     <a href="/work" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
       &larr; All work
@@ -45,7 +45,7 @@ for (const item of showcase) {
     )}
 
     <h1 class="mt-6 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">{title}</h1>
-    <p class="mt-2 text-lg text-muted-foreground">{tagline}</p>
+    <p class="mt-2 text-lg text-muted-foreground">{company ? `${company} · ${tagline}` : tagline}</p>
     {externalUrl && (
       <a
         href={externalUrl}

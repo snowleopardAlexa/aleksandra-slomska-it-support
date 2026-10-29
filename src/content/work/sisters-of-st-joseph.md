@@ -1,5 +1,6 @@
 ---
-title: "Sisters of St. Joseph Brentwood - Multi-Site WordPress & CRM Integration"
+title: "Web Strategy & Development Lead"
+company: "Sisters of St. Joseph Brentwood"
 tagline: "Three-site WordPress rebuild with Blackbaud Raiser's Edge CRM integration - building complete donation, event registration, and memorial purchase forms in Raiser's Edge, plus Google Forms for program intake, and WCAG accessibility compliance."
 order: 3.5
 featured: false

@@ -7,17 +7,20 @@ export interface FeaturedCard {
   slug: string;
   href?: string;
   title: string;
+  company?: string; // shown at the start of the description, e.g. "Company · ..."
   description: string;
   tags: string[];
   thumbnail?: string;
   thumbnailVideo?: string;
   mediaContain?: boolean;
+  workOnly?: boolean; // list on /work but not in the homepage Featured Work section
 }
 
 export const FEATURED_CARDS: FeaturedCard[] = [
   {
     slug: "wildari-planet",
-    title: "Wildari Planet - UX/UI Design & Full-Stack Conservation Platform",
+    title: "Full-Stack Developer",
+    company: "Wildari Planet",
     description:
       "Built end-to-end with Drupal 10, Astro.js, and Claude Code - custom content types, taxonomy, and API architecture for a wildlife education platform with a modern UX/UI, conservation-status filters, and tiered interactive quizzes.",
     tags: ["Drupal 10", "Astro.js", "Claude Code", "HTML/CSS", "JavaScript", "GitHub", "Figma", "Git", "Cloudflare", "Canva"],
@@ -25,7 +28,8 @@ export const FEATURED_CARDS: FeaturedCard[] = [
   },
   {
     slug: "cat-connections-nyc-digital-fundraising",
-    title: "Cat Connections NYC - Digital Fundraising Infrastructure & Form Architecture",
+    title: "Fundraising & eCRM Specialist",
+    company: "Cat Connections NYC",
     description:
       "Built complete donation form infrastructure using Raisely eCRM and GoFundMe for an animal rescue nonprofit - raising $18,000+ in about six months through optimized giving pages, email sequences, and Google Ad Grants campaign management.",
     tags: ["Raisely", "GoFundMe", "eCRM", "Donation Forms", "Mailchimp", "Google Ad Grants", "JavaScript", "HTML/CSS", "Shelterluv Adoption & Foster Forms"],
@@ -33,7 +37,8 @@ export const FEATURED_CARDS: FeaturedCard[] = [
   },
   {
     slug: "cat-connections-nyc-technical-lead",
-    title: "Cat Connections NYC - Technical Lead, Web Development, Donation Forms & Digital Operations",
+    title: "Technical Lead, Website & CMS",
+    company: "Cat Connections NYC",
     description:
       "Technical lead for an animal rescue - built its full CMS website on WordPress, then Webflow, with adoption, foster, and intake forms linked to Shelterluv. Also set up Google Workspace, Google Ads, social media, and the brand identity.",
     tags: ["Webflow", "PHP", "API Integration", "HTML/CSS", "JavaScript", "Adoption Forms", "Foster Forms", "Volunteer Forms", "AnimalsFirst", "Shelterluv", "Google Workspace", "Canva", "Donation Form", "Google PageSpeed"],
@@ -41,7 +46,8 @@ export const FEATURED_CARDS: FeaturedCard[] = [
   },
   {
     slug: "sisters-of-st-joseph",
-    title: "Sisters of St. Joseph - Multi-Site WordPress & CRM Integration",
+    title: "Web Strategy & Development Lead",
+    company: "Sisters of St. Joseph",
     description:
       "Three-site WordPress rebuild with Blackbaud Raiser’s Edge CRM integration - custom donation forms and giving pages, QA testing, WCAG accessibility compliance, custom CSS styling, staff training on CMS governance, and Constant Contact donor email campaigns.",
     tags: ["WordPress", "Blackbaud Raiser’s Edge", "Donation Forms", "Donation Pages", "WCAG", "QA Testing", "HTML", "CSS", "A/B Testing", "Constant Contact", "Submittable"],
@@ -62,6 +68,15 @@ export const FEATURED_CARDS: FeaturedCard[] = [
       "Site architecture, branding, and content for a Maui-based nonprofit, built on real community research - including Figma-to-code implementation, a Webflow CMS with a Client First class system the team can maintain, and logo updates.",
     tags: ["Webflow", "Nonprofit", "Figma", "HTML/CSS"],
     thumbnailVideo: "/work/paragenius-foundation.mp4",
+  },
+  {
+    slug: "everloving-paws",
+    title: "Everloving Paws Digital Agency",
+    description:
+      "Brand identity, UX/UI design, Webflow development, and digital strategy for a boutique digital agency built exclusively for the pet industry.",
+    tags: ["Webflow", "Figma", "Client-First", "Canva"],
+    thumbnailVideo: "/work/everloving-paws-video.mp4",
+    workOnly: true,
   },
 ];
 

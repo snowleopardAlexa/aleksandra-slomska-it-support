@@ -1,5 +1,6 @@
 ---
-title: "Cat Connections NYC - Digital Fundraising Infrastructure & Form Architecture"
+title: "Fundraising & eCRM Specialist"
+company: "Cat Connections NYC"
 tagline: "Story-driven Raisely donation forms built in Raisely's drag-and-drop builder, with hand-written HTML and CSS to customize what the builder couldn't - plus multi-channel campaigns that raised $18,000+ in about six months for animal medical care."
 order: 2.2
 featured: false
