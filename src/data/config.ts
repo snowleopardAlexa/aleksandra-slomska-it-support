@@ -3,7 +3,7 @@ export const CONFIG = {
   // Site Settings
   // ---------------------------------------------------------------------------
   site: {
-    url: "https://itsalexatech.com",
+    url: "https://snowleopardalexa.github.io/aleksandra-slomska-it-support",
     locale: "en_US",
     twitterHandle: "",
   },

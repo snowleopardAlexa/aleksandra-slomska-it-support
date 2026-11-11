@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@/lib/utils";
 import CaseStudyCard from "@/components/work/CaseStudyCard.astro";
 import { FEATURED_CARDS } from "@/data/featured";
 ---
@@ -6,7 +7,7 @@ import { FEATURED_CARDS } from "@/data/featured";
 <section class="mx-auto max-w-6xl px-6 py-16 sm:py-20">
   <div class="mb-10 flex items-end justify-between gap-4">
     <h2 class="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">Featured work</h2>
-    <a href="/work" class="hidden shrink-0 text-sm font-medium text-foreground hover:underline underline-offset-4 sm:inline">
+    <a href={withBase("/work")} class="hidden shrink-0 text-sm font-medium text-foreground hover:underline underline-offset-4 sm:inline">
       View all work &rarr;
     </a>
   </div>
@@ -29,7 +30,7 @@ import { FEATURED_CARDS } from "@/data/featured";
     ))}
   </div>
 
-  <a href="/work" class="mt-8 inline-flex text-sm font-medium text-foreground hover:underline underline-offset-4 sm:hidden">
+  <a href={withBase("/work")} class="mt-8 inline-flex text-sm font-medium text-foreground hover:underline underline-offset-4 sm:hidden">
     View all work &rarr;
   </a>
 </section>

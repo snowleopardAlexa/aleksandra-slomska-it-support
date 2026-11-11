@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@/lib/utils";
 import "../styles/global.css";
 import { DATA } from "@/data/resume";
 import { CONFIG } from "@/data/config";
@@ -22,11 +23,10 @@ const {
 const pageTitle = title
   ? CONFIG.seo.titleTemplate.replace("%s", title).replace("%n", DATA.name)
   : DATA.name;
-const ogImage = image
-  ? image.startsWith("http")
-    ? image
-    : `${CONFIG.site.url}${image}`
-  : `${CONFIG.site.url}${DATA.ogImage}`;
+const ogSource = image ?? DATA.ogImage;
+const ogImage = ogSource.startsWith("http")
+  ? ogSource
+  : new URL(withBase(ogSource), Astro.site).href;
 
 const { light, dark, radius } = CONFIG.theme;
 const { baseFontSize } = CONFIG.typography;
@@ -101,8 +101,7 @@ const { baseFontSize } = CONFIG.typography;
     ></style>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
 
     <!-- Primary meta -->
     <title>{pageTitle}</title>
@@ -110,6 +109,7 @@ const { baseFontSize } = CONFIG.typography;
     <link rel="canonical" href={canonicalURL} />
 
     <!-- Robots -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="robots" content={CONFIG.seo.robots} />
     <meta
       name="googlebot"

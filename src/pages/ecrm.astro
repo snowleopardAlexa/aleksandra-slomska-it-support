@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@/lib/utils";
 export const prerender = true;
 import Layout from "@/layouts/Layout.astro";
 
@@ -106,7 +107,7 @@ const GOFUNDME_BUILT = [
             {RE_FORMS.map((form) => (
               <figure>
                 <video
-                  src={form.src}
+                  src={withBase(form.src)}
                   aria-label={form.alt}
                   class="aspect-[4/3] w-full rounded-lg border border-border bg-muted/40 object-contain"
                   autoplay
@@ -136,7 +137,7 @@ const GOFUNDME_BUILT = [
         <figure>
           <h3 class="text-sm font-medium uppercase tracking-wide text-muted-foreground">Donation Forms in Raiser's Edge</h3>
           <video
-            src="/work/donation-form-sisters-video.mp4"
+            src={withBase("/work/donation-form-sisters-video.mp4")}
             aria-label="Sisters of St. Joseph donation form built in Blackbaud Raiser's Edge"
             class="mt-3 w-full rounded-lg border border-border"
             autoplay
@@ -166,7 +167,7 @@ const GOFUNDME_BUILT = [
         </div>
 
         <a
-          href="/work/sisters-of-st-joseph"
+          href={withBase("/work/sisters-of-st-joseph")}
           class="inline-flex w-fit items-center gap-1.5 rounded-md bg-foreground px-5 py-2.5 text-sm font-medium text-background hover:opacity-90 transition-opacity"
         >
           See the Sisters of St. Joseph Case Study &rarr;
@@ -206,7 +207,7 @@ const GOFUNDME_BUILT = [
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <figure>
             <video
-              src="/work/mr-blinks-video-donation-campaign.mp4"
+              src={withBase("/work/mr-blinks-video-donation-campaign.mp4")}
               aria-label="Raisely campaign page for Mr. Blinks"
               class="aspect-[4/3] w-full rounded-lg border border-border bg-muted/40 object-contain"
               autoplay
@@ -224,7 +225,7 @@ const GOFUNDME_BUILT = [
           </figure>
           <figure>
             <video
-              src="/work/donation-builder-ccnyc-video.mp4"
+              src={withBase("/work/donation-builder-ccnyc-video.mp4")}
               aria-label="Walkthrough of a Cat Connections NYC donation form in Raisely"
               class="aspect-[4/3] w-full rounded-lg border border-border bg-muted/40 object-contain"
               autoplay
@@ -243,7 +244,7 @@ const GOFUNDME_BUILT = [
         </div>
 
         <a
-          href="/work/cat-connections-nyc-digital-fundraising"
+          href={withBase("/work/cat-connections-nyc-digital-fundraising")}
           class="inline-flex w-fit items-center gap-1.5 rounded-md bg-foreground px-5 py-2.5 text-sm font-medium text-background hover:opacity-90 transition-opacity"
         >
           See the Digital Fundraising Case Study &rarr;
@@ -284,7 +285,7 @@ const GOFUNDME_BUILT = [
           {GOFUNDME_CAMPAIGNS.map((cat) => (
             <figure>
               <video
-                src={cat.src}
+                src={withBase(cat.src)}
                 aria-label={`GoFundMe campaign page for ${cat.name}`}
                 class="w-full rounded-lg border border-border bg-muted/40"
                 autoplay
@@ -325,7 +326,7 @@ const GOFUNDME_BUILT = [
 
         <figure>
           <video
-            src="/work/csj-learning-connection-donation-campaign-video.mp4"
+            src={withBase("/work/csj-learning-connection-donation-campaign-video.mp4")}
             aria-label="CSJ Learning Connection donation page built in Raisely"
             class="w-full rounded-lg border border-border"
             autoplay

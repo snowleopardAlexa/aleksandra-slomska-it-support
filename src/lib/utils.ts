@@ -36,3 +36,15 @@ export function formatDate(date: string) {
     return `${fullDate} (${yearsAgo}y ago)`;
   }
 }
+
+/**
+ * Prefix a root-relative path ("/work/foo") with the configured base path
+ * (e.g. "/aleksandra-slomska-it-support"). External URLs, protocol-relative
+ * URLs, mailto:, anchors and already-prefixed paths are returned unchanged.
+ */
+export function withBase<T extends string | undefined>(path: T): T {
+  if (!path || !path.startsWith("/") || path.startsWith("//")) return path;
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+  if (!base || path === base || path.startsWith(`${base}/`)) return path;
+  return `${base}${path}` as T;
+}

@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@/lib/utils";
 export const prerender = true;
 import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
@@ -34,7 +35,7 @@ for (const item of showcase) {
 
 <Layout title={company ? `${company} - ${title}` : title} description={tagline}>
   <article class="mx-auto max-w-3xl px-6 py-16 sm:py-20">
-    <a href="/work" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+    <a href={withBase("/work")} class="text-sm text-muted-foreground hover:text-foreground transition-colors">
       &larr; All work
     </a>
 
@@ -48,7 +49,7 @@ for (const item of showcase) {
     <p class="mt-2 text-lg text-muted-foreground">{company ? `${company} · ${tagline}` : tagline}</p>
     {externalUrl && (
       <a
-        href={externalUrl}
+        href={withBase(externalUrl)}
         target="_blank"
         rel="noopener noreferrer"
         class={externalButton
@@ -108,9 +109,9 @@ for (const item of showcase) {
             {group.items.map((item) => (
               <figure>
                 {item.video ? (
-                  <video src={item.src} aria-label={item.alt} class="w-full rounded-lg border border-border" autoplay loop muted playsinline controls />
+                  <video src={withBase(item.src)} aria-label={item.alt} class="w-full rounded-lg border border-border" autoplay loop muted playsinline controls />
                 ) : (
-                  <img src={item.src} alt={item.alt} class="w-full rounded-lg border border-border" loading="lazy" />
+                  <img src={withBase(item.src)} alt={item.alt} class="w-full rounded-lg border border-border" loading="lazy" />
                 )}
                 {item.caption && (
                   <figcaption class="mt-3 text-sm leading-relaxed text-muted-foreground">{item.caption}</figcaption>
@@ -125,16 +126,16 @@ for (const item of showcase) {
             <h2 class="text-sm font-medium uppercase tracking-wide text-muted-foreground">{item.title}</h2>
           )}
           {item.video ? (
-            <video src={item.src} aria-label={item.alt} class={`w-full rounded-lg border border-border ${item.title ? "mt-3" : ""}`} autoplay loop muted playsinline controls />
+            <video src={withBase(item.src)} aria-label={item.alt} class={`w-full rounded-lg border border-border ${item.title ? "mt-3" : ""}`} autoplay loop muted playsinline controls />
           ) : (
-            <img src={item.src} alt={item.alt} class={`w-full rounded-lg border border-border ${item.title ? "mt-3" : ""}`} loading="lazy" />
+            <img src={withBase(item.src)} alt={item.alt} class={`w-full rounded-lg border border-border ${item.title ? "mt-3" : ""}`} loading="lazy" />
           )}
           {item.caption && (
             <figcaption class="mt-3 text-sm leading-relaxed text-muted-foreground">{item.caption}</figcaption>
           )}
           {item.linkUrl && (
             <a
-              href={item.linkUrl}
+              href={withBase(item.linkUrl)}
               target="_blank"
               rel="noopener noreferrer"
               class="mt-4 inline-flex items-center gap-1.5 rounded-md bg-foreground px-5 py-2.5 text-sm font-medium text-background hover:opacity-90 transition-opacity"
@@ -203,7 +204,7 @@ for (const item of showcase) {
           <h2 class="text-sm font-medium uppercase tracking-wide text-muted-foreground">Links</h2>
           <div class="mt-3 flex flex-col gap-2">
             {links.map((link) => (
-              <a href={link.url} target="_blank" rel="noopener noreferrer" class="w-fit text-sm font-medium text-foreground hover:underline underline-offset-4">
+              <a href={withBase(link.url)} target="_blank" rel="noopener noreferrer" class="w-fit text-sm font-medium text-foreground hover:underline underline-offset-4">
                 {link.label} &rarr;
               </a>
             ))}
@@ -223,9 +224,9 @@ for (const item of showcase) {
                 ) : (
                   <figure>
                     {item.video ? (
-                      <video src={item.src} aria-label={item.alt} class="w-full rounded-lg border border-border" autoplay loop controls muted playsinline />
+                      <video src={withBase(item.src)} aria-label={item.alt} class="w-full rounded-lg border border-border" autoplay loop controls muted playsinline />
                     ) : (
-                      <img src={item.src} alt={item.alt} class="w-full rounded-lg border border-border object-cover" loading="lazy" />
+                      <img src={withBase(item.src)} alt={item.alt} class="w-full rounded-lg border border-border object-cover" loading="lazy" />
                     )}
                     {item.caption && (
                       <figcaption class="mt-3 text-sm leading-relaxed text-muted-foreground">{item.caption}</figcaption>
@@ -237,7 +238,7 @@ for (const item of showcase) {
           )}
           {galleryLink && (
             <a
-              href={galleryLink.url}
+              href={withBase(galleryLink.url)}
               target="_blank"
               rel="noopener noreferrer"
               class="mt-6 inline-flex items-center gap-1.5 rounded-md bg-foreground px-5 py-2.5 text-sm font-medium text-background hover:opacity-90 transition-opacity"

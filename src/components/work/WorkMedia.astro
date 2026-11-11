@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@/lib/utils";
 import PlaceholderThumb from "@/components/PlaceholderThumb.astro";
 
 interface Props {
@@ -17,12 +18,12 @@ const { title, thumbnail, thumbnailVideo, class: className = "", contain = false
 {
   thumbnail && contain ? (
     <div class={`flex items-center justify-center bg-white p-10 sm:p-14 ${className}`}>
-      <img src={thumbnail} alt={title} class="size-full object-contain" loading="lazy" />
+      <img src={withBase(thumbnail)} alt={title} class="size-full object-contain" loading="lazy" />
     </div>
   ) : thumbnail ? (
-    <img src={thumbnail} alt={title} class={`object-cover ${className}`} loading="lazy" />
+    <img src={withBase(thumbnail)} alt={title} class={`object-cover ${className}`} loading="lazy" />
   ) : thumbnailVideo ? (
-    <video src={thumbnailVideo} class={`object-cover ${className}`} autoplay loop muted playsinline preload="metadata" />
+    <video src={withBase(thumbnailVideo)} class={`object-cover ${className}`} autoplay loop muted playsinline preload="metadata" />
   ) : (
     <PlaceholderThumb label={title} class={className} />
   )

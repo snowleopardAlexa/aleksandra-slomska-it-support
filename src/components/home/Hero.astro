@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@/lib/utils";
 // Hero copy is a draft -- pick your favorite or edit directly. Alternates:
 //   B: "I build with AI." / "A running record of what I've shipped - websites,
 //      campaigns, and now, an AI-native platform built solo."
@@ -23,7 +24,7 @@ const hero = allWork.find((entry) => entry.id === "wildari-planet") ?? allWork[0
     </p>
   </div>
 
-  <a href={`/work/${hero.id}`} class="mt-10 block">
+  <a href={withBase(`/work/${hero.id}`)} class="mt-10 block">
     <BrowserFrame class="aspect-[16/9] w-full sm:aspect-[21/9]">
       <WorkMedia
         title={hero.data.title}

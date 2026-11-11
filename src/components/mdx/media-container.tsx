@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/utils";
 /* eslint-disable @next/next/no-img-element */
 
 interface MediaContainerProps {
@@ -17,13 +18,13 @@ export function MediaContainer({
     <div className={`ring-4 ring-muted w-full h-[300px] rounded-lg overflow-hidden flex items-center justify-center ${className}`}>
       {type === "image" ? (
         <img
-          src={src}
+          src={withBase(src)}
           alt={alt}
           className="w-full h-full object-cover object-center max-w-full max-h-full"
         />
       ) : (
         <video
-          src={src}
+          src={withBase(src)}
           className="w-full h-full object-cover object-center max-w-full max-h-full"
           controls
         />
