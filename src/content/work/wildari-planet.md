@@ -57,6 +57,13 @@ process:
       text: "I played every quiz myself. I found uneven text and inconsistencies, and I checked that right and wrong answers each behaved correctly."
     - lead: "What I learned."
       text: "Claude Code was wrong many times. It's fast, but it doesn't check its own work, so I did."
+sections:
+  - title: "Maintenance and backups"
+    items:
+      - "Local Drupal environment in Lando/Docker"
+      - "Dependencies managed with Composer and Drush scripts"
+      - "Automated daily database backups to Google Drive, set up on macOS using the terminal"
+      - "Drupal user roles"
 tools: ["Drupal 10", "Astro.js", "Claude Code", "HTML5", "CSS/Sass", "JavaScript", "JSON:API", "Git", "GitHub", "Figma", "Claude Design", "Cloudflare Workers", "Drupal AI Module", "AI Automators", "Visual Studio Code", "macOS Terminal"]
 # TODO(alexa): add your live site and GitHub repo URLs, e.g.
 #   - { label: "Visit live site", url: "https://..." }

@@ -1,0 +1,113 @@
+---
+export const prerender = true;
+import Layout from "@/layouts/Layout.astro";
+import { withBase } from "@/lib/utils";
+
+// Same page shell as /tools: heading, intro, then uppercase group labels.
+const SECTIONS = [
+  {
+    title: "Accounts and access",
+    items: [
+      "Google Workspace administration: user accounts, aliases, permissions, and email forwarding",
+      "Password resets and account lockouts",
+      "Setting up two-factor authentication (2FA/MFA)",
+      "Onboarding and offboarding: creating accounts and access for new people, removing them when people leave",
+      "Managing sharing and permissions on Google Drive and shared folders",
+    ],
+  },
+  {
+    title: "Domains and DNS",
+    items: [
+      "Domain and DNS management through Cloudflare",
+      "Connecting domains and managing DNS records for WordPress and Webflow sites",
+      "Setting up and fixing SSL/HTTPS certificates",
+      "Email authentication records (SPF, DKIM, DMARC) so a domain's email doesn't land in spam",
+    ],
+  },
+  {
+    title: "Computers and hardware",
+    items: [
+      "Hands-on with Windows (Lenovo ThinkPad) and macOS (MacBook)",
+      "Setting up new computers: accounts, software, and settings",
+      "Troubleshooting computers and printers - diagnosing what's wrong and fixing it",
+      "Connecting and fixing peripherals: monitors, scanners, webcams, and headsets",
+      "Setting up work email and apps on phones and tablets",
+      "Troubleshooting Wi-Fi, internet, and network connection problems",
+    ],
+  },
+  {
+    title: "Operating systems and software",
+    items: [
+      "Comfortable on Windows, macOS, and Linux",
+      "Installing, uninstalling, configuring, and updating software",
+      "Creating folders, managing permissions, partitioning disks, and using the command line/terminal",
+      "Installing, configuring, and maintaining WordPress, Webflow, Drupal 10, AnimalsFirst, Shelterluv, and Raiser's Edge integrations",
+      "Supporting Microsoft 365: Outlook, Word, Excel, Teams, and OneDrive",
+      "Setting up and troubleshooting Zoom and Google Meet",
+    ],
+  },
+  {
+    title: "Security and maintenance",
+    items: [
+      "Keeping Windows, macOS, and installed apps updated and patched",
+      "Running antivirus scans and removing malware or suspicious software",
+      "WordPress security: vetting and installing plugins, and keeping core, plugins, and themes up to date",
+      "Familiar with the OWASP Top 10 web security risks",
+    ],
+  },
+  {
+    title: "Troubleshooting and help desk",
+    items: [
+      "Diagnosing donation form failures and integration problems, build and configuration errors",
+      "Remote support by screen sharing (Zoom, Google Meet, TeamViewer)",
+      "Tracking support requests in a ticketing system",
+    ],
+  },
+  {
+    title: "Training and documentation",
+    items: ["Training staff, volunteers, and fosters; writing how-to guides"],
+  },
+  {
+    title: "Backups",
+    items: [
+      "Automated daily Drupal database backups to Google Drive",
+      "Docker/Lando, Composer, Drush, Git/GitHub",
+    ],
+  },
+  {
+    title: "Testing",
+    items: ["QA and beta testing, including Submittable"],
+  },
+];
+---
+
+<Layout title="IT Support" description="Accounts, DNS, computers and printers, operating systems, security, troubleshooting, training, backups, and testing.">
+  <section class="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+    <h1 class="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">IT Support</h1>
+    <p class="mt-3 max-w-xl text-muted-foreground">
+      Technical support has been part of every role I've had. I'm the person staff go to when
+      something breaks.
+    </p>
+
+    {SECTIONS.map((section) => (
+      <div class="mt-12">
+        <h2 class="text-xs font-medium uppercase tracking-widest text-muted-foreground">{section.title}</h2>
+        <ul class="mt-4 flex flex-col gap-2">
+          {section.items.map((item) => (
+            <li class="flex gap-3 leading-relaxed text-foreground">
+              <span class="mt-2 size-1 shrink-0 rounded-full bg-foreground" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+
+    <a
+      href={withBase("/certificates")}
+      class="mt-12 inline-flex text-sm font-medium text-foreground hover:underline underline-offset-4"
+    >
+      See my certificates &rarr;
+    </a>
+  </section>
+</Layout>

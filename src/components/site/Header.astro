@@ -2,6 +2,11 @@
 import { withBase } from "@/lib/utils";
 import { SITE } from "@/data/site";
 
+// Nav items to the left and right of the Work dropdown.
+const workIndex = SITE.nav.findIndex((item) => item.href === "/work");
+const NAV_BEFORE_WORK = SITE.nav.slice(0, workIndex);
+const NAV_AFTER_WORK = SITE.nav.slice(workIndex + 1);
+
 // Work dropdown items, in display order.
 const WORK_MENU = [
   {
@@ -41,6 +46,17 @@ const ARROW_ANGLES = [-45, 45, 135, -135];
 
     <!-- Desktop nav -->
     <nav class="hidden md:flex items-center gap-1 mx-auto">
+      {NAV_BEFORE_WORK.map((item) => (
+        <a
+          href={withBase(item.href)}
+          target={item.external ? "_blank" : undefined}
+          rel={item.external ? "noopener noreferrer" : undefined}
+          class="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+        >
+          {item.label}
+        </a>
+      ))}
+
       <details class="group relative">
         <summary class="cursor-pointer list-none select-none flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
           Work
@@ -81,7 +97,7 @@ const ARROW_ANGLES = [-45, 45, 135, -135];
         </div>
       </details>
 
-      {SITE.nav.slice(1).map((item) => (
+      {NAV_AFTER_WORK.map((item) => (
         <a
           href={withBase(item.href)}
           target={item.external ? "_blank" : undefined}
@@ -120,6 +136,13 @@ const ARROW_ANGLES = [-45, 45, 135, -135];
           <span class="sr-only">Menu</span>
         </summary>
         <div class="absolute right-0 top-full z-50 mt-2 w-72 rounded-xl border border-border bg-background p-4 shadow-xl">
+          <div class="mb-3 flex flex-col gap-1 border-b border-border pb-3">
+            {NAV_BEFORE_WORK.map((item) => (
+              <a href={withBase(item.href)} class="rounded-md px-2 py-1.5 text-sm text-foreground hover:bg-muted">
+                {item.label}
+              </a>
+            ))}
+          </div>
           <p class="mb-2 text-xs font-medium uppercase tracking-wide text-muted-foreground">Work</p>
           <div class="mb-4 flex flex-col gap-1">
             {WORK_MENU.map((item) => (
@@ -133,7 +156,7 @@ const ARROW_ANGLES = [-45, 45, 135, -135];
             </a>
           </div>
           <div class="flex flex-col gap-1 border-t border-border pt-3">
-            {SITE.nav.slice(1).map((item) => (
+            {NAV_AFTER_WORK.map((item) => (
               <a
                 href={withBase(item.href)}
                 target={item.external ? "_blank" : undefined}

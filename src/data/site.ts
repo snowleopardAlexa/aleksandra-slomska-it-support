@@ -2,10 +2,13 @@
 // TODO(alexa): confirm the AI Lab URL is live and the subscribe URL is the
 // correct Substack/AI Lab signup link before launch.
 export const SITE = {
-  wordmark: "Alexa Kyler",
+  wordmark: "Aleksandra Slomska",
   aiLabUrl: "https://missiondrivenailab.com",
   subscribeUrl: "https://missiondrivenailab.com/subscribe",
+  // "Work" is a dropdown in the header; items before it render to its left.
   nav: [
+    { label: "IT Support", href: "/it-support", external: false },
+    { label: "Certificates", href: "/certificates", external: false },
     { label: "Work", href: "/work", external: false },
     { label: "About", href: "/about", external: false },
     { label: "Founder Story", href: "/founder-story", external: false },

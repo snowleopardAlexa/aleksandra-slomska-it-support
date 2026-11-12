@@ -33,6 +33,13 @@ showcase:
 results:
   - "Placed 50 cats in forever homes"
   - "Raised around $18,000 in about six months, with 90% of the funds going to medical bills for the cats in our care"
+sections:
+  - title: "Support and administration"
+    items:
+      - "Domain and DNS management in Cloudflare"
+      - "Google Workspace accounts, aliases, and forwarding"
+      - "Training volunteers and fosters on the intake forms and donation platforms, and writing short how-to guides"
+      - "Troubleshooting software, integration, and data problems across platforms"
 tools: ["Webflow CMS", "WordPress", "PHP", "API Integration", "AnimalsFirst", "Shelterluv", "GoFundMe", "Zeffy", "Raisely", "HTML5", "CSS/Sass", "JavaScript", "Google Analytics 4", "Google Tag Manager", "Google Workspace", "Google Ads", "YouTube", "Instagram", "Facebook", "Figma", "Canva"]
 links: []
 gallery: []

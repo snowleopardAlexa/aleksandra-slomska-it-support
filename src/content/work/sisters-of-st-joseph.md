@@ -36,6 +36,13 @@ showcase:
     caption: "A registration form in Spanish for the Long Island Immigration Clinic."
     video: true
     half: true
+sections:
+  - title: "Support"
+    items:
+      - "Primary Raiser's Edge troubleshooter"
+      - "Staff training on WordPress, Constant Contact, and Raiser's Edge"
+      - "QA and beta testing in Submittable"
+      - "Helping staff with Google Workspace and email problems"
 tools: ["WordPress", "Blackbaud Raiser's Edge", "CSS", "HTML5", "JavaScript", "Constant Contact", "Submittable", "Google Forms", "Google Sheets", "Google Analytics 4", "WCAG", "Figma"]
 # TODO(alexa): add the Sisters website URL if it's still live, e.g.
 #   - { label: "Visit live site", url: "https://..." }

@@ -39,10 +39,18 @@ import {
   ABTesting,
   WebVitals,
   PCI,
+  Windows,
+  MacOS,
+  Linux,
+  Terminal,
+  GoogleWorkspace,
+  DockerLando,
+  Composer,
 } from "@/components/ui/svgs/monogram";
 
 // Page sections on /tools, in display order.
 export const TOOL_GROUPS = [
+  "Systems and IT support",
   "Primary tools",
   "eCRM & Fundraising",
   "Analytics & Compliance",
@@ -68,6 +76,80 @@ export interface Tool {
 // described in chat -- flagged draft: true -- review and edit before launch.
 // Within each group, entries render in array order.
 export const TOOLS: Tool[] = [
+  // Systems and IT support
+  {
+    name: "Windows",
+    logo: Windows,
+    group: "Systems and IT support",
+    project: "Google IT Support course series",
+    description: "Installed and removed software, created folders, managed file permissions, and partitioned disks.",
+    draft: true,
+  },
+  {
+    name: "macOS",
+    logo: MacOS,
+    group: "Systems and IT support",
+    project: "Wildari Planet",
+    description: "Ran my day-to-day development setup and scheduled the automated daily Drupal database backups to Google Drive.",
+    draft: true,
+  },
+  {
+    name: "Linux",
+    logo: Linux,
+    group: "Systems and IT support",
+    project: "Google IT Support course series",
+    description: "Installed and removed packages, managed users and permissions, and worked with disks and file systems.",
+    draft: true,
+  },
+  {
+    name: "Command line / terminal",
+    logo: Terminal,
+    group: "Systems and IT support",
+    project: "Wildari Planet",
+    description: "Ran Lando, Composer, Drush, and Git commands, and set up the backup scripts from the macOS terminal.",
+    draft: true,
+  },
+  {
+    name: "Google Workspace",
+    logo: GoogleWorkspace,
+    group: "Systems and IT support",
+    project: "Cat Connections NYC",
+    description: "Administered user accounts, aliases, permissions, and email forwarding for the organization.",
+    draft: true,
+  },
+  {
+    name: "Cloudflare DNS",
+    logo: Cloudflare,
+    group: "Systems and IT support",
+    project: "Cat Connections NYC",
+    description: "Managed the domain and its DNS records through Cloudflare.",
+    draft: true,
+  },
+  {
+    name: "Docker / Lando",
+    logo: DockerLando,
+    group: "Systems and IT support",
+    project: "Wildari Planet",
+    description: "Ran the local Drupal 10 development environment in Lando on Docker.",
+    draft: true,
+  },
+  {
+    name: "Git / GitHub",
+    logo: GitHub,
+    group: "Systems and IT support",
+    project: "Wildari Planet, this site",
+    description: "Version-controlled projects and deployed this portfolio to GitHub Pages with GitHub Actions.",
+    draft: true,
+  },
+  {
+    name: "Composer / Drush",
+    logo: Composer,
+    group: "Systems and IT support",
+    project: "Wildari Planet",
+    description: "Managed Drupal dependencies with Composer and ran maintenance tasks with Drush scripts.",
+    draft: true,
+  },
+
   // Primary tools
   {
     name: "Claude Code",

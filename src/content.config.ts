@@ -31,6 +31,8 @@ const work = defineCollection({
     overview: z.string().optional(),
     built: z.array(z.string()).default([]),
     results: z.array(z.string()).default([]),
+    // Extra titled bullet lists, shown just before "Tools used".
+    sections: z.array(z.object({ title: z.string(), items: z.array(z.string()) })).default([]),
     tools: z.array(z.string()).default([]),
     links: z.array(z.object({ label: z.string(), url: z.string() })).default([]),
     linksNote: z.string().optional(), // shown under Links when there's no public URL

@@ -18,24 +18,6 @@ export interface FeaturedCard {
 
 export const FEATURED_CARDS: FeaturedCard[] = [
   {
-    slug: "wildari-planet",
-    title: "Full-Stack Developer",
-    company: "Wildari Planet",
-    description:
-      "Built end-to-end with Drupal 10, Astro.js, and Claude Code - custom content types, taxonomy, and API architecture for a wildlife education platform with a modern UX/UI, conservation-status filters, and tiered interactive quizzes.",
-    tags: ["Drupal 10", "Astro.js", "Claude Code", "HTML/CSS", "JavaScript", "GitHub", "Figma", "Git", "Cloudflare", "Canva"],
-    thumbnailVideo: "/work/wildari-planet-video.mp4",
-  },
-  {
-    slug: "cat-connections-nyc-digital-fundraising",
-    title: "Fundraising & eCRM Specialist",
-    company: "Cat Connections NYC",
-    description:
-      "Built complete donation form infrastructure using Raisely eCRM and GoFundMe for an animal rescue nonprofit - raising $18,000+ in about six months through optimized giving pages, email sequences, and Google Ad Grants campaign management.",
-    tags: ["Raisely", "GoFundMe", "eCRM", "Donation Forms", "Mailchimp", "Google Ad Grants", "JavaScript", "HTML/CSS", "Shelterluv Adoption & Foster Forms"],
-    thumbnailVideo: "/work/mr-blinks-video-donation-campaign.mp4",
-  },
-  {
     slug: "cat-connections-nyc-technical-lead",
     title: "Technical Lead, Website & CMS",
     company: "Cat Connections NYC",
@@ -45,6 +27,15 @@ export const FEATURED_CARDS: FeaturedCard[] = [
     thumbnailVideo: "/work/cat-connections-nyc.mp4",
   },
   {
+    slug: "wildari-planet",
+    title: "Full-Stack Developer",
+    company: "Wildari Planet",
+    description:
+      "Built end-to-end with Drupal 10, Astro.js, and Claude Code - custom content types, taxonomy, and API architecture for a wildlife education platform with a modern UX/UI, conservation-status filters, and tiered interactive quizzes.",
+    tags: ["Drupal 10", "Astro.js", "Claude Code", "HTML/CSS", "JavaScript", "GitHub", "Figma", "Git", "Cloudflare", "Canva"],
+    thumbnailVideo: "/work/wildari-planet-video.mp4",
+  },
+  {
     slug: "sisters-of-st-joseph",
     title: "Web Strategy & Development Lead",
     company: "Sisters of St. Joseph",
@@ -52,6 +43,15 @@ export const FEATURED_CARDS: FeaturedCard[] = [
       "Three-site WordPress rebuild with Blackbaud Raiser’s Edge CRM integration - custom donation forms and giving pages, QA testing, WCAG accessibility compliance, custom CSS styling, staff training on CMS governance, and Constant Contact donor email campaigns.",
     tags: ["WordPress", "Blackbaud Raiser’s Edge", "Donation Forms", "Donation Pages", "WCAG", "QA Testing", "HTML", "CSS", "A/B Testing", "Constant Contact", "Submittable"],
     thumbnailVideo: "/work/sisters.mp4",
+  },
+  {
+    slug: "cat-connections-nyc-digital-fundraising",
+    title: "Fundraising & eCRM Specialist",
+    company: "Cat Connections NYC",
+    description:
+      "Built complete donation form infrastructure using Raisely eCRM and GoFundMe for an animal rescue nonprofit - raising $18,000+ in about six months through optimized giving pages, email sequences, and Google Ad Grants campaign management.",
+    tags: ["Raisely", "GoFundMe", "eCRM", "Donation Forms", "Mailchimp", "Google Ad Grants", "JavaScript", "HTML/CSS", "Shelterluv Adoption & Foster Forms"],
+    thumbnailVideo: "/work/mr-blinks-video-donation-campaign.mp4",
   },
   {
     slug: "csj-learning-connection",
